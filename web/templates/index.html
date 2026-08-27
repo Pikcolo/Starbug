@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks AI Assistant - LINE Chatbot & NLP Simulator</title>
+    <meta name="description" content="AI Assistant สำหรับร้านสตาร์บัคส์ ประเทศไทย แนะนำเครื่องดื่ม ขนม โปรโมชั่น และสุ่มเมนูด้วยระบบประมวลผลภาษาธรรมชาติ (NLP)">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar: NLP & Analytics Inspector -->
+        <aside class="inspector-sidebar">
+            <div class="brand-header">
+                <div class="brand-logo">
+                    <svg viewBox="0 0 100 100" width="38" height="38">
+                        <circle cx="50" cy="50" r="48" fill="#006241" />
+                        <circle cx="50" cy="50" r="44" fill="none" stroke="#CBA258" stroke-width="2" />
+                        <path d="M50 20 L58 40 L80 40 L62 54 L69 76 L50 62 L31 76 L38 54 L20 40 L42 40 Z" fill="#FFFFFF" opacity="0.9" />
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="brand-title">Starbucks AI</h1>
+                    <p class="brand-subtitle">LINE Bot & NLP Engine v2.0</p>
+                </div>
+            </div>
+
+            <!-- NLP Telemetry Card -->
+            <div class="panel-card" id="nlpMetricsCard">
+                <div class="panel-card-header">
+                    <span class="panel-icon">⚡</span>
+                    <h3>NLP Realtime Diagnostics</h3>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Detected Intent:</span>
+                    <span class="metric-value badge badge-intent" id="metricIntent">WAITING...</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Confidence:</span>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="confidenceBar" style="width: 0%;"></div>
+                    </div>
+                    <span class="metric-value" id="metricConfidence">0.0%</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Engine Latency:</span>
+                    <span class="metric-value badge badge-latency" id="metricLatency">0.0 ms</span>
+                </div>
+
+                <hr class="panel-divider">
+
+                <h4 class="sub-heading">Extracted Entities</h4>
+                <div class="entities-grid" id="entitiesContainer">
+                    <div class="entity-pill">No active query</div>
+                </div>
+            </div>
+
+            <!-- Preset Test Cases -->
+            <div class="panel-card">
+                <div class="panel-card-header">
+                    <span class="panel-icon">🧪</span>
+                    <h3>Test Prompts (1-Click)</h3>
+                </div>
+                <p class="panel-desc">คลิกเพื่อทดสอบชุดคำสั่ง NLP รูปแบบต่างๆ ทันที</p>
+                <div class="preset-buttons">
+                    <button class="preset-btn" onclick="sendPreset('ขอดูเมนูกาแฟสดและลาเต้')">
+                        ☕ เมนูกาแฟสด
+                    </button>
+                    <button class="preset-btn" onclick="sendPreset('ขอดูเมนูชาเขียวมัทฉะ')">
+                        🍵 ชาเขียวมัทฉะ
+                    </button>
+                    <button class="preset-btn" onclick="sendPreset('แนะนำเมนูปั่น Frappuccino')">
+                        🥤 เครื่องดื่มปั่น
+                    </button>
+                    <button class="preset-btn" onclick="sendPreset('มีขนมและเบเกอรี่อะไรบ้าง')">
+                        🥐 เบเกอรี่ &amp; เค้ก
+                    </button>
+                    <button class="preset-btn" onclick="sendPreset('ขอดูเมนูใหม่ล่าสุด')">
+                        ✨ เมนูใหม่ซีซั่นนี้
+                    </button>
+                    <button class="preset-btn" onclick="sendPreset('มีโปรโมชั่นส่วนลดอะไรบ้าง')">
+                        🏷️ โปรโมชั่นพิเศษ
+                    </button>
+                    <button class="preset-btn" onclick="sendPreset('สุ่มเมนูให้หน่อย ไม่อยากคิด')">
+                        🎲 สุ่ม Top 5
+                    </button>
+                    <button class="preset-btn" onclick="sendPreset('งบไม่เกิน 150 บาทมีเมนูไหนบ้าง')">
+                        💰 งบไม่เกิน 150฿
+                    </button>
+                    <button class="preset-btn" onclick="sendPreset('ดูดวงกาแฟให้หน่อย วันนี้เป็นไงบ้าง')" style="border-left: 3px solid #CBA258;">
+                        🔮 ดูดวงกาแฟ
+                    </button>
+                    <button class="preset-btn" onclick="sendPreset('ขอสูตรลับสตาร์บัคส์หน่อย')" style="border-left: 3px solid #D9383A;">
+                        🧪 สูตรลับหลังร้าน
+                    </button>
+                    <button class="preset-btn" onclick="sendPreset('แซวฉันหน่อย บาริสต้าปากแซ่บ')" style="border-left: 3px solid #006241;">
+                        🤣 บาริสต้าปากแซ่บ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Checkpoints Status -->
+            <div class="panel-card">
+                <div class="panel-card-header">
+                    <span class="panel-icon">🛡️</span>
+                    <h3>Checkpoint Verification</h3>
+                </div>
+                <div class="checkpoint-item">
+                    <span class="check-icon">✅</span>
+                    <div class="check-text">
+                        <strong>1. Robust Scraping Pipeline</strong>
+                        <p>Polite rate-limiting & missing-value fallback</p>
+                    </div>
+                </div>
+                <div class="checkpoint-item">
+                    <span class="check-icon">✅</span>
+                    <div class="check-text">
+                        <strong>2. NLP Sub-50ms Latency</strong>
+                        <p>PyThaiNLP + RapidFuzz + Intent parser</p>
+                    </div>
+                </div>
+                <div class="checkpoint-item">
+                    <span class="check-icon">✅</span>
+                    <div class="check-text">
+                        <strong>3. Fair Top-5 Randomizer</strong>
+                        <p>Session memory buffer & anti-repetition</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area: Mimicking LINE Mobile Simulator -->
+        <main class="chat-viewport">
+            <div class="mobile-phone-frame">
+                <!-- LINE Header Bar -->
+                <header class="line-header">
+                    <div class="line-avatar">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=100&auto=format&fit=crop&q=80" alt="Starbucks Logo">
+                    </div>
+                    <div class="line-header-info">
+                        <h2>Starbucks TH Assistant</h2>
+                        <span class="status-indicator">
+                            <span class="dot"></span> Official Bot Simulator
+                        </span>
+                    </div>
+                    <div class="line-header-actions">
+                        <button class="header-action-btn" title="Clear Chat" onclick="clearChat()">🗑️</button>
+                    </div>
+                </header>
+
+                <!-- Chat Message Stream -->
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Welcome greeting message injected by script -->
+                </div>
+
+                <!-- Quick Replies Ribbon -->
+                <div class="quick-reply-bar" id="quickReplyBar">
+                    <!-- Dynamic chips -->
+                </div>
+
+                <!-- Input Area -->
+                <footer class="chat-input-bar">
+                    <form id="chatForm" onsubmit="handleFormSubmit(event)">
+                        <input 
+                            type="text" 
+                            id="userInput" 
+                            placeholder="พิมพ์คำถาม เช่น เมนูใหม่, กาแฟไม่เกิน 150..." 
+                            autocomplete="off"
+                        >
+                        <button type="submit" id="sendBtn" class="send-btn" title="ส่งข้อความ">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <!-- Raw JSON Inspector Modal -->
+    <div class="modal" id="jsonModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>LINE Flex Message JSON Payload</h3>
+                <button class="modal-close" onclick="closeJsonModal()">✕</button>
+            </div>
+            <pre class="json-code" id="jsonCodeView"></pre>
+        </div>
+    </div>
+
+    <script src="/static/js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "sbux_iced_americano",
+    "name_th": "ไอซ์ คาเฟ่ อเมริกาโน่",
+    "name_en": "Iced Caffè Americano",
+    "category": "espresso",
+    "subcategory": "iced_coffee",
+    "price": 130,
+    "prices": {
+      "Tall": 130,
+      "Grande": 145,
+      "Venti": 160
+    },
+    "calories": "15 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/iced-caffe-americano-1777534751103.png",
+    "description": "เอสเพรสโซ่ช็อตเข้มข้นสกัดสดใหม่ ผสมน้ำเย็นและน้ำแข็ง ให้รสชาติกาแฟแท้ที่หอมเข้ม สดชื่น ตื่นตัว",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "coffee_strong",
+      "fruity_refreshing"
+    ]
+  },
+  {
+    "id": "sbux_caffe_americano",
+    "name_th": "คาเฟ่ อเมริกาโน่",
+    "name_en": "Caffè Americano",
+    "category": "espresso",
+    "subcategory": "hot_coffee",
+    "price": 130,
+    "prices": {
+      "Tall": 130,
+      "Grande": 145,
+      "Venti": 160
+    },
+    "calories": "15 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/caffe-americano-1777543081574.png",
+    "description": "เอสเพรสโซ่ช็อตเข้มข้นผสมน้ำร้อน ให้รสชาติและกลิ่นหอมกรุ่นของกาแฟคั่วบดแท้ตามแบบฉบับสตาร์บัคส์",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "coffee_strong"
+    ]
+  },
+  {
+    "id": "sbux_caffe_latte",
+    "name_th": "คาเฟ่ ลาเต้",
+    "name_en": "Caffè Latte",
+    "category": "espresso",
+    "subcategory": "hot_coffee",
+    "price": 145,
+    "prices": {
+      "Tall": 145,
+      "Grande": 160,
+      "Venti": 175
+    },
+    "calories": "190 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/caffe-latte-1777542277749.png",
+    "description": "กาแฟเอสเพรสโซ่รสเข้มกลมกล่อม ผสานนมสดสตรีมร้อนนุ่มละมุน ท็อปด้วยฟองนมเนียนละเอียด",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "coffee_strong",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_iced_latte",
+    "name_th": "ไอซ์ คาเฟ่ ลาเต้",
+    "name_en": "Iced Caffè Latte",
+    "category": "espresso",
+    "subcategory": "iced_coffee",
+    "price": 145,
+    "prices": {
+      "Tall": 145,
+      "Grande": 160,
+      "Venti": 175
+    },
+    "calories": "130 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/iced-caffe-latte-1777534370699.png",
+    "description": "เอสเพรสโซ่ช็อตเข้มข้นผสมนมสดเย็นและน้ำแข็ง รสชาตินุ่มละมุน กลมกล่อมลงตัว ดื่มง่าย",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "coffee_strong",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_iced_caramel_macchiato",
+    "name_th": "ไอซ์ คาราเมล มัคคิอาโต",
+    "name_en": "Iced Caramel Macchiato",
+    "category": "espresso",
+    "subcategory": "iced_coffee",
+    "price": 165,
+    "prices": {
+      "Tall": 165,
+      "Grande": 180,
+      "Venti": 195
+    },
+    "calories": "250 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/iced-caramel-macchiato-1777534192857.png",
+    "description": "นมสดผสมน้ำเชื่อมวานิลลา ตามด้วยช็อตเอสเพรสโซ่เข้มข้น และราดด้วยซอสคาราเมลสูตรเฉพาะเป็นตารางด้านบน",
+    "is_new": false,
+    "is_promo": true,
+    "promo_text": "เมนูซิกเนเจอร์ยอดนิยม",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "caramel",
+      "vanilla",
+      "coffee_strong",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_caramel_macchiato",
+    "name_th": "คาราเมล มัคคิอาโต",
+    "name_en": "Caramel Macchiato",
+    "category": "espresso",
+    "subcategory": "hot_coffee",
+    "price": 165,
+    "prices": {
+      "Tall": 165,
+      "Grande": 180,
+      "Venti": 195
+    },
+    "calories": "250 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/caramel-macchiato-1777542201735.png",
+    "description": "นมสดสตรีมร้อนผสมน้ำเชื่อมวานิลลา ท็อปด้วยเอสเพรสโซ่ช็อตและซอสคาราเมลหอมหวาน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "caramel",
+      "vanilla",
+      "coffee_strong",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_caffe_mocha",
+    "name_th": "คาเฟ่ มอคค่า",
+    "name_en": "Caffè Mocha",
+    "category": "espresso",
+    "subcategory": "hot_coffee",
+    "price": 160,
+    "prices": {
+      "Tall": 160,
+      "Grande": 175,
+      "Venti": 190
+    },
+    "calories": "360 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/caffe-mocha-1777542004206.png",
+    "description": "เอสเพรสโซ่รสเข้มผสานซอสมอคค่าช็อกโกแลตเข้มข้น นมสดร้อน และท็อปด้วยวิปครีม",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "chocolate",
+      "coffee_strong",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_iced_caffe_mocha",
+    "name_th": "ไอซ์ คาเฟ่ มอคค่า",
+    "name_en": "Iced Caffè Mocha",
+    "category": "espresso",
+    "subcategory": "iced_coffee",
+    "price": 160,
+    "prices": {
+      "Tall": 160,
+      "Grande": 175,
+      "Venti": 190
+    },
+    "calories": "350 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/iced-caffe-mocha-1777533940730.png",
+    "description": "ช็อตเอสเพรสโซ่ผสมผสานซอสช็อกโกแลตมอคค่าเข้มข้น นมสดเย็น และวิปครีมเนื้อนุ่ม",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "chocolate",
+      "coffee_strong",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_cappuccino",
+    "name_th": "คาปูชิโน่",
+    "name_en": "Cappuccino",
+    "category": "espresso",
+    "subcategory": "hot_coffee",
+    "price": 145,
+    "prices": {
+      "Tall": 145,
+      "Grande": 160,
+      "Venti": 175
+    },
+    "calories": "140 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/cappuccino-1777542969220.png",
+    "description": "เอสเพรสโซ่ช็อตเข้มข้นกับนมร้อน ท็อปด้วยชั้นฟองนมหนานุ่มฟูในสัดส่วนที่สมบูรณ์แบบ",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "coffee_strong",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_white_chocolate_mocha",
+    "name_th": "ไวท์ ช็อกโกแลต มอคค่า",
+    "name_en": "White Chocolate Mocha",
+    "category": "espresso",
+    "subcategory": "hot_coffee",
+    "price": 165,
+    "prices": {
+      "Tall": 165,
+      "Grande": 180,
+      "Venti": 195
+    },
+    "calories": "430 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/white-chocolate-mocha-1777542122643.png",
+    "description": "เอสเพรสโซ่ผสานซอสไวท์ช็อกโกแลตเข้มข้น นมสดร้อน และวิปครีมหวานมัน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "chocolate",
+      "sweet",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_iced_white_choc_mocha",
+    "name_th": "ไอซ์ ไวท์ ช็อกโกแลต มอคค่า",
+    "name_en": "Iced White Chocolate Mocha",
+    "category": "espresso",
+    "subcategory": "iced_coffee",
+    "price": 165,
+    "prices": {
+      "Tall": 165,
+      "Grande": 180,
+      "Venti": 195
+    },
+    "calories": "420 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/iced-white-chocolate-mocha-1777534097980.png",
+    "description": "เอสเพรสโซ่ช็อต นมสดเย็น และซอสไวท์ช็อกโกแลตหวานมัน เสิร์ฟพร้อมน้ำแข็งและวิปครีม",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "chocolate",
+      "sweet",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_cold_brew",
+    "name_th": "โคลด์ บรูว์",
+    "name_en": "Cold Brew",
+    "category": "cold_brew",
+    "subcategory": "iced_coffee",
+    "price": 145,
+    "prices": {
+      "Tall": 145,
+      "Grande": 160,
+      "Venti": 175
+    },
+    "calories": "5 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/cold-brew-1777533227584.png",
+    "description": "กาแฟสกัดเย็นนานกว่า 14 ชั่วโมง รสชาตินุ่มลื่น ละมุนเป็นพิเศษ ไร้ความฝาด ดื่มง่าย",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "coffee_strong"
+    ]
+  },
+  {
+    "id": "sbux_vanilla_sweet_cream_cold_brew",
+    "name_th": "วานิลลา สวีท ครีม โคลด์ บรูว์",
+    "name_en": "Vanilla Sweet Cream Cold Brew",
+    "category": "cold_brew",
+    "subcategory": "iced_coffee",
+    "price": 165,
+    "prices": {
+      "Tall": 165,
+      "Grande": 180,
+      "Venti": 195
+    },
+    "calories": "110 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/vanilla-sweet-cream-cold-brew-1777533115974.png",
+    "description": "กาแฟโคลด์บรูว์รสเข้ม ราดด้วยวานิลลาสวีทครีมโฮมเมดที่ทำสดใหม่ หอมหวานละมุนลอยตัวด้านบน",
+    "is_new": false,
+    "is_promo": true,
+    "promo_text": "เมนูยอดนิยมประจำเดือน",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "vanilla",
+      "coffee_strong",
+      "milky_smooth",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_salted_caramel_cold_brew",
+    "name_th": "ซอลท์เท็ด คาราเมล โคลด์ โฟม โคลด์ บรูว์",
+    "name_en": "Salted Caramel Cold Foam Cold Brew",
+    "category": "cold_brew",
+    "subcategory": "iced_coffee",
+    "price": 175,
+    "prices": {
+      "Tall": 175,
+      "Grande": 190,
+      "Venti": 205
+    },
+    "calories": "220 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/cold-brew-1777533227584.png",
+    "description": "กาแฟสกัดเย็นท็อปด้วยโฟมนมเนียนนุ่มรสซอลท์เท็ดคาราเมล ตัดกับความเข้มของกาแฟได้อย่างลงตัว",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "caramel",
+      "coffee_strong",
+      "milky_smooth",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_nitro_cold_brew",
+    "name_th": "ไนโตร โคลด์ บรูว์",
+    "name_en": "Nitro Cold Brew",
+    "category": "cold_brew",
+    "subcategory": "iced_coffee",
+    "price": 165,
+    "prices": {
+      "Tall": 165,
+      "Grande": 180,
+      "Venti": 195
+    },
+    "calories": "5 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/nitro-cold-brew-1777532992190.png",
+    "description": "กาแฟสกัดเย็นอัดก๊าซไนโตรเจน ให้ฟองครีมเนียนนุ่มละเอียดดั่งกำมะหยี่ ดื่มด่ำรสชาติกาแฟแท้แบบไม่ต้องเติมน้ำแข็ง",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "coffee_strong",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_green_tea_cream_frappuccino",
+    "name_th": "กรีนที ครีม แฟรปปูชิโน่ (ชาเขียวปั่น)",
+    "name_en": "Green Tea Cream Frappuccino",
+    "category": "frappuccino",
+    "subcategory": "tea_frappuccino",
+    "price": 170,
+    "prices": {
+      "Tall": 170,
+      "Grande": 185,
+      "Venti": 200
+    },
+    "calories": "410 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/green-tea-cream-frappuccino-1777369995757.png",
+    "description": "ผงชาเขียวมัทฉะแท้เกรดพรีเมียม ปั่นกับนมสดและน้ำแข็ง ท็อปด้วยวิปครีมเนียนนุ่ม หอมมันเข้มข้น",
+    "is_new": false,
+    "is_promo": true,
+    "promo_text": "1-for-1 Happy Hour",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "frappuccino"
+    ],
+    "flavor_notes": [
+      "matcha",
+      "milky_smooth",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_pure_matcha_frappuccino",
+    "name_th": "เพียว มัทฉะ ครีม แฟรปปูชิโน่",
+    "name_en": "Pure Matcha Cream Frappuccino",
+    "category": "frappuccino",
+    "subcategory": "tea_frappuccino",
+    "price": 175,
+    "prices": {
+      "Tall": 175,
+      "Grande": 190,
+      "Venti": 205
+    },
+    "calories": "380 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/pure-matcha-frappuccino-1777372817947.png",
+    "description": "ชาเขียวมัทฉะแท้ 100% ไม่ผสมน้ำตาล ปั่นละเอียดรสชาติเข้มข้นสไตล์ญี่ปุ่นแท้",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "frappuccino"
+    ],
+    "flavor_notes": [
+      "matcha",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_java_chip_frappuccino",
+    "name_th": "จาวา ชิพ แฟรปปูชิโน่",
+    "name_en": "Java Chip Frappuccino",
+    "category": "frappuccino",
+    "subcategory": "coffee_frappuccino",
+    "price": 170,
+    "prices": {
+      "Tall": 170,
+      "Grande": 185,
+      "Venti": 200
+    },
+    "calories": "440 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/java-chip-frappuccino-1777373029321.png",
+    "description": "กาแฟปั่นผสมซอสมอคค่าและช็อกโกแลตชิพกรุบกรอบ ท็อปด้วยวิปครีมและราดซอสช็อกโกแลต",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "frappuccino"
+    ],
+    "flavor_notes": [
+      "chocolate",
+      "coffee_strong",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_caramel_frappuccino",
+    "name_th": "คาราเมล แฟรปปูชิโน่",
+    "name_en": "Caramel Frappuccino",
+    "category": "frappuccino",
+    "subcategory": "coffee_frappuccino",
+    "price": 165,
+    "prices": {
+      "Tall": 165,
+      "Grande": 180,
+      "Venti": 195
+    },
+    "calories": "380 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/caramel-frappuccino-1777373385303.png",
+    "description": "กาแฟคั่วผสมน้ำเชื่อมคาราเมลและนมสดปั่นละเอียด ท็อปด้วยวิปครีมและซอสคาราเมลหอมหวาน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "frappuccino"
+    ],
+    "flavor_notes": [
+      "caramel",
+      "coffee_strong",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_vanilla_cream_frappuccino",
+    "name_th": "วานิลลา ครีม แฟรปปูชิโน่",
+    "name_en": "Vanilla Cream Frappuccino",
+    "category": "frappuccino",
+    "subcategory": "cream_frappuccino",
+    "price": 160,
+    "prices": {
+      "Tall": 160,
+      "Grande": 175,
+      "Venti": 190
+    },
+    "calories": "350 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/vanilla-cream-frappuccino-1777369419468.png",
+    "description": "นมสดปั่นผสมน้ำเชื่อมวานิลลาแท้และน้ำแข็ง รสชาตินุ่มละมุน หอมหวาน ท็อปด้วยวิปครีม ไม่มีคาเฟอีน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "frappuccino"
+    ],
+    "flavor_notes": [
+      "vanilla",
+      "sweet",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_green_tea_latte",
+    "name_th": "กรีนที ลาเต้",
+    "name_en": "Green Tea Latte",
+    "category": "tea",
+    "subcategory": "tea_latte",
+    "price": 155,
+    "prices": {
+      "Tall": 155,
+      "Grande": 170,
+      "Venti": 185
+    },
+    "calories": "240 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/green-tea-latte-1777537451439.png",
+    "description": "ชาเขียวมัทฉะแท้ผสมนมสดร้อนสตรีมนุ่มละมุน หอมกลิ่นชาเขียวพรีเมียม เข้มข้น กลมกล่อม",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "matcha",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_iced_green_tea_latte",
+    "name_th": "ไอซ์ กรีนที ลาเต้",
+    "name_en": "Iced Green Tea Latte",
+    "category": "tea",
+    "subcategory": "tea_latte",
+    "price": 155,
+    "prices": {
+      "Tall": 155,
+      "Grande": 170,
+      "Venti": 185
+    },
+    "calories": "200 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/iced-green-tea-latte-1777442719759.png",
+    "description": "ผงชาเขียวมัทฉะแท้ตีละลายผสมนมสดเย็นและน้ำแข็ง รสชาตินุ่มนวล หอมมัน ดื่มแล้วสดชื่น",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "matcha",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_pure_matcha_latte",
+    "name_th": "เพียว มัทฉะ ลาเต้",
+    "name_en": "Pure Matcha Latte",
+    "category": "tea",
+    "subcategory": "tea_latte",
+    "price": 160,
+    "prices": {
+      "Tall": 160,
+      "Grande": 175,
+      "Venti": 190
+    },
+    "calories": "190 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/pure-matcha-latte-1777538496361.png",
+    "description": "ชาเขียวมัทฉะเข้มข้นไร้น้ำตาล ผสานนมสดสตรีมนุ่ม รสชาติมัทฉะแท้ดั้งเดิมจากญี่ปุ่น",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot",
+      "iced"
+    ],
+    "flavor_notes": [
+      "matcha",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_signature_chocolate",
+    "name_th": "ซิกเนเจอร์ ช็อกโกแลต",
+    "name_en": "Signature Chocolate",
+    "category": "chocolate",
+    "subcategory": "hot_chocolate",
+    "price": 150,
+    "prices": {
+      "Tall": 150,
+      "Grande": 165,
+      "Venti": 180
+    },
+    "calories": "390 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/signature-chocolate-1777536418839.png",
+    "description": "ช็อกโกแลตพรีเมียมสูตรซิกเนเจอร์ ผสมนมสดร้อนสตรีมและท็อปด้วยวิปครีม โรยผงโกโก้",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "chocolate",
+      "milky_smooth",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_iced_signature_chocolate",
+    "name_th": "ไอซ์ ซิกเนเจอร์ ช็อกโกแลต",
+    "name_en": "Iced Signature Chocolate",
+    "category": "chocolate",
+    "subcategory": "iced_chocolate",
+    "price": 150,
+    "prices": {
+      "Tall": 150,
+      "Grande": 165,
+      "Venti": 180
+    },
+    "calories": "320 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/iced-signature-chocolate-1777434870182.png",
+    "description": "ช็อกโกแลตเข้มข้นผสมนมสดเย็นและน้ำแข็ง ท็อปด้วยวิปครีมเนื้อนุ่ม โรยผงโกโก้สุดฟิน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "chocolate",
+      "milky_smooth",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_strawberry_acai",
+    "name_th": "สตรอว์เบอร์รี่ อาซาอิ วิธ เลมอนเนด",
+    "name_en": "Strawberry Açaí with Lemonade",
+    "category": "refresher",
+    "subcategory": "iced_refresher",
+    "price": 150,
+    "prices": {
+      "Tall": 150,
+      "Grande": 165,
+      "Venti": 180
+    },
+    "calories": "140 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/strawberry-acai-with-lemonade-1777434599681.png",
+    "description": "เครื่องดื่มรีเฟรชเชอร์รสสตรอว์เบอร์รี่และอาซาอิ ผสมน้ำมะนาวเลมอนเนดและชิ้นเนื้อสตรอว์เบอร์รี่แท้",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "fruity_refreshing",
+      "sour_tangy",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_yuzu_black_tea",
+    "name_th": "ไอซ์ ยูซุ แบล็ค ที",
+    "name_en": "Iced Yuzu Black Tea",
+    "category": "tea",
+    "subcategory": "iced_tea",
+    "price": 155,
+    "prices": {
+      "Tall": 155,
+      "Grande": 170,
+      "Venti": 185
+    },
+    "calories": "110 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/yuzu-black-tea-thailand-exclusive-1777443446664.png",
+    "description": "ชาดำระดับพรีเมียมผสานน้ำส้มยูซุแท้ รสชาติเปรี้ยวอมหวาน หอมสดชื่น ดับกระหายคลายร้อนได้อย่างดี",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "fruity_refreshing",
+      "sour_tangy",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_lychee_earl_grey",
+    "name_th": "ลิ้นจี่ เอิร์ลเกรย์ ที (ร้อน / เย็น)",
+    "name_en": "Lychee Earl Grey Tea",
+    "category": "tea",
+    "subcategory": "tea_latte",
+    "price": 180,
+    "prices": {
+      "Tall": 180,
+      "Grande": 195,
+      "Venti": 210
+    },
+    "calories": "110 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/lychee-earl-grey-tea-thailand-exclusive-1777359850712.png",
+    "description": "ชาเอิร์ลเกรย์หอมละมุน ผสานน้ำลิ้นจี่พร้อมเนื้อลิ้นจี่ฉ่ำหวาน น้ำเชื่อม และน้ำอัญชันสีสวยงาม สดชื่นคลายร้อน",
+    "is_new": true,
+    "is_promo": false,
+    "promo_text": "เมนูเอ็กซ์คลูซีฟเฉพาะสาขา",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced",
+      "hot"
+    ],
+    "flavor_notes": [
+      "fruity_refreshing",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_sunset_tea",
+    "name_th": "ซันเซ็ท (ร้อน / เย็น)",
+    "name_en": "Sunset Tea Refresher",
+    "category": "tea",
+    "subcategory": "refresher",
+    "price": 170,
+    "prices": {
+      "Tall": 170,
+      "Grande": 185,
+      "Venti": 200
+    },
+    "calories": "95 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/sunset-hot-iced-1777359759497.png",
+    "description": "ชาฮิบิสคัสสีแดงสดใส เปรี้ยวอมหวานผสานน้ำส้ม เนื้อส้มแท้ และโซดาซ่าสดชื่น ดับกระหายคลายร้อนยามบ่าย",
+    "is_new": true,
+    "is_promo": true,
+    "promo_text": "เมนูใหม่รับซัมเมอร์",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "fruity_refreshing",
+      "sour_tangy"
+    ]
+  },
+  {
+    "id": "sbux_ham_cheese_croissant",
+    "name_th": "แฮมและเชดด้าชีสครัวซองต์",
+    "name_en": "Ham & Cheddar Cheese Croissant",
+    "category": "bakery",
+    "subcategory": "croissant",
+    "price": 145,
+    "prices": {
+      "Standard": 145
+    },
+    "calories": "380 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/ham-cheddar-croissant-1777715237936.png",
+    "description": "ครัวซองต์เนยสดแท้อบกรอบนอกนุ่มใน สอดไส้แฮมคุณภาพพรีเมียมและเชดด้าชีสเยิ้มรสชาติกลมกล่อม",
+    "is_new": false,
+    "is_promo": true,
+    "promo_text": "Breakfast Combo ลด 30%",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "warm"
+    ],
+    "flavor_notes": [
+      "savory",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_butter_croissant",
+    "name_th": "ครัวซองต์ดับเบิ้ลชีส",
+    "name_en": "Double Cheese Croissant",
+    "category": "bakery",
+    "subcategory": "croissant",
+    "price": 135,
+    "prices": {
+      "Standard": 135
+    },
+    "calories": "340 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/double-cheese-croissant-1777714649519.png",
+    "description": "ครัวซองต์เนยสดนำเข้าจากฝรั่งเศส หอมกลิ่นเนยแท้ แป้งเป็นชั้นฟูกรอบ อบร้อนพร้อมเสิร์ฟ",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "warm"
+    ],
+    "flavor_notes": [
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_riceberry_club_sandwich",
+    "name_th": "แซนด์วิชไรซ์เบอร์รี่คลับ",
+    "name_en": "Riceberry Club Sandwich",
+    "category": "bakery",
+    "subcategory": "sandwich",
+    "price": 165,
+    "prices": {
+      "Standard": 165
+    },
+    "calories": "320 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/riceberry-club-sandwich-1777716064547.png",
+    "description": "แซนด์วิชขนมปังข้าวไรซ์เบอร์รี่เพื่อสุขภาพ สอดไส้อกไก่นุ่ม ไข่ดาว มะเขือเทศ และผักสลัดสดใหม่",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "warm"
+    ],
+    "flavor_notes": [
+      "savory"
+    ]
+  },
+  {
+    "id": "sbux_creamy_mushroom_soup",
+    "name_th": "ซุปเห็ดครีมมี่",
+    "name_en": "Creamy Mushroom Soup",
+    "category": "bakery",
+    "subcategory": "soup",
+    "price": 140,
+    "prices": {
+      "Standard": 140
+    },
+    "calories": "210 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/creamy-mushroom-soup-1777713513467.png",
+    "description": "ซุปเห็ดครีมเข้มข้น หอมกรุ่นกลิ่นเนยและเห็ดแชมปิญอง เสิร์ฟร้อนๆ คู่กับขนมปังกรอบ",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "milky_smooth",
+      "savory"
+    ]
+  },
+  {
+    "id": "sbux_signature_chocolate_cake",
+    "name_th": "เค้กช็อกโกแลตซิกเนเจอร์",
+    "name_en": "Starbucks Signature Chocolate Cake",
+    "category": "bakery",
+    "subcategory": "cake",
+    "price": 155,
+    "prices": {
+      "Standard": 155
+    },
+    "calories": "390 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/starbucks-signature-chocolate-cake-1777718954293.png",
+    "description": "เค้กช็อกโกแลตฟัดจ์เข้มข้น เนื้อเค้กเนียนนุ่ม สลับชั้นด้วยครีมช็อกโกแลตพรีเมียมหวานกำลังดี",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "cold"
+    ],
+    "flavor_notes": [
+      "chocolate",
+      "sweet",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_blueberry_cheesecake",
+    "name_th": "บลูเบอร์รี่ชีสเค้ก",
+    "name_en": "Blueberry Cheesecake",
+    "category": "bakery",
+    "subcategory": "cake",
+    "price": 165,
+    "prices": {
+      "Standard": 165
+    },
+    "calories": "410 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/blueberry-cheesecake-1777718834956.png",
+    "description": "ชีสเค้กเนื้อเนียนนุ่ม หอมมันจากครีมชีสแท้ ราดด้วยท็อปปิ้งบลูเบอร์รี่ฉ่ำเปรี้ยวอมหวาน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "cold"
+    ],
+    "flavor_notes": [
+      "milky_smooth",
+      "sour_tangy",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_choc_chip_cookie",
+    "name_th": "ซอฟต์คุกกี้ช็อกโกแลตชิพ",
+    "name_en": "Soft Chocolate Chip Cookie",
+    "category": "bakery",
+    "subcategory": "cookie",
+    "price": 85,
+    "prices": {
+      "Standard": 85
+    },
+    "calories": "310 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/soft-chocolate-chip-cookie-1777957429131.png",
+    "description": "คุกกี้เนยสดแท้เนื้อนุ่มหนึบ อัดแน่นด้วยช็อกโกแลตชิพเข้มข้น หอมกรุ่น อุ่นร้อนยิ่งอร่อย",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "warm"
+    ],
+    "flavor_notes": [
+      "chocolate",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_caramel_pudding_affogato_frappuccino",
+    "name_th": "คาราเมล พุดดิ้ง อัฟโฟกาโต้ สไตล์ แฟรปปูชิโน่",
+    "name_en": "Caramel Pudding Affogato-Style Frappuccino",
+    "category": "frappuccino",
+    "subcategory": "seasonal_frappuccino",
+    "price": 170,
+    "prices": {
+      "Tall": 170,
+      "Grande": 185,
+      "Venti": 200
+    },
+    "calories": "390 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/caramel-pudding-latte-1784204548355.jpg",
+    "description": "เครื่องดื่มปั่นซอลท์เท็ดคาราเมล อัฟโฟกาโต้ สไตล์ ผสมผสานกับช็อตกาแฟ ซอสบราวน์ ชูการ์ เสิร์ฟพร้อมเอ้ก คัสตาร์ด พุดดิ้งเนื้อเนียนนุ่ม ด้านบนท็อปด้วยวิปครีมและซอสบราวน์ ชูการ์",
+    "is_new": true,
+    "is_promo": true,
+    "promo_text": "Seasonal New Arrival",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "frappuccino"
+    ],
+    "flavor_notes": [
+      "caramel",
+      "sweet",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_caramel_pudding_cream_frappuccino",
+    "name_th": "คาราเมล พุดดิ้ง ครีม แฟรปปูชิโน่",
+    "name_en": "Caramel Pudding Cream Frappuccino",
+    "category": "frappuccino",
+    "subcategory": "seasonal_frappuccino",
+    "price": 170,
+    "prices": {
+      "Tall": 170,
+      "Grande": 185,
+      "Venti": 200
+    },
+    "calories": "360 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/caramel-pudding-latte-1784204548355.jpg",
+    "description": "เครื่องดื่มปั่นซอลท์เท็ด คาราเมล อัฟโฟกาโต้ สไตล์ ผสมผสานกับซอสบราวน์ ชูการ์ เสิร์ฟพร้อมเอ้ก คัสตาร์ด พุดดิ้งเนื้อเนียนนุ่ม ด้านบนท็อปด้วยวิปครีมและซอสบราวน์ ชูการ์ ในรูปแบบครีมปั่น",
+    "is_new": true,
+    "is_promo": true,
+    "promo_text": "Seasonal New Arrival",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "frappuccino"
+    ],
+    "flavor_notes": [
+      "caramel",
+      "sweet",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_tiramisu_cream_frappuccino",
+    "name_th": "ที-รามิสุ ครีม แฟรปปูชิโน่",
+    "name_en": "Tiramisu Cream Frappuccino",
+    "category": "frappuccino",
+    "subcategory": "seasonal_frappuccino",
+    "price": 170,
+    "prices": {
+      "Tall": 170,
+      "Grande": 185,
+      "Venti": 200
+    },
+    "calories": "380 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/tea-ramisu-cream-frappuccino-1784203801432.jpg",
+    "description": "ช็อกโกแลต แบล็กที พาวเดอร์ปั่น ผสมผสานกับซอสมาสคาร์โปเนชีสและนม ท็อปด้วยวิปครีมมาสคาร์โปเน และตกแต่งด้านบนด้วยช็อกโกแลต แบล็กที พาวเดอร์",
+    "is_new": true,
+    "is_promo": true,
+    "promo_text": "Seasonal New Arrival",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "frappuccino"
+    ],
+    "flavor_notes": [
+      "chocolate",
+      "sweet",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_espresso",
+    "name_th": "เอสเพรสโซ่",
+    "name_en": "Espresso",
+    "category": "espresso",
+    "subcategory": "hot_coffee",
+    "price": 100,
+    "prices": {
+      "Solo": 100,
+      "Doppio": 115
+    },
+    "calories": "10 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/starbucks-reserve-espresso-1777366581834.png",
+    "description": "ช็อตเอสเพรสโซ่เข้มข้น รสชาติหนักแน่น สกัดจากเมล็ดกาแฟคุณภาพเยี่ยมของสตาร์บัคส์",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "coffee_strong"
+    ]
+  },
+  {
+    "id": "sbux_espresso_macchiato",
+    "name_th": "เอสเพรสโซ่ มัคคิอาโต",
+    "name_en": "Espresso Macchiato",
+    "category": "espresso",
+    "subcategory": "hot_coffee",
+    "price": 100,
+    "prices": {
+      "Solo": 100,
+      "Doppio": 115
+    },
+    "calories": "15 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/starbucks-reserve-espresso-macchiato-1777365543262.png",
+    "description": "ช็อตเอสเพรสโซ่เข้มข้น ท็อปด้วยฟองนมนุ่มละมุนด้านบน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "coffee_strong",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_espresso_con_panna",
+    "name_th": "เอสเพรสโซ่ คอน พาน่า",
+    "name_en": "Espresso Con Panna",
+    "category": "espresso",
+    "subcategory": "hot_coffee",
+    "price": 100,
+    "prices": {
+      "Solo": 100,
+      "Doppio": 115
+    },
+    "calories": "35 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/starbucks-reserve-espresso-con-pana-1777366466655.png",
+    "description": "ช็อตเอสเพรสโซ่เข้มข้น ท็อปด้วยวิปครีมหวานมันเข้มข้น",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "coffee_strong",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_chai_tea",
+    "name_th": "ไช ที",
+    "name_en": "Chai Tea",
+    "category": "tea",
+    "subcategory": "hot_tea",
+    "price": 105,
+    "prices": {
+      "Short": 105,
+      "Tall": 105,
+      "Grande": 105,
+      "Venti": 120
+    },
+    "calories": "0 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/chai-tea-1777538432656.png",
+    "description": "ชาดำอินเดียผสมเครื่องเทศหอมกรุ่น ให้ความรู้สึกอบอุ่นและผ่อนคลาย",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "fruity_refreshing"
+    ]
+  },
+  {
+    "id": "sbux_earl_grey_tea",
+    "name_th": "เอิร์ลเกรย์ ที",
+    "name_en": "Earl Grey Tea",
+    "category": "tea",
+    "subcategory": "hot_tea",
+    "price": 105,
+    "prices": {
+      "Short": 105,
+      "Tall": 105,
+      "Grande": 105,
+      "Venti": 120
+    },
+    "calories": "0 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/earl-grey-tea-1777538352124.png",
+    "description": "ชาดำที่ให้กลิ่นเบอร์กามอตและลาเวนเดอร์ หอมสดชื่นเป็นเอกลักษณ์",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "fruity_refreshing"
+    ]
+  },
+  {
+    "id": "sbux_classic_chocolate_hot",
+    "name_th": "คลาสสิค ช็อกโกแลต",
+    "name_en": "Classic Hot Chocolate",
+    "category": "chocolate",
+    "subcategory": "hot_chocolate",
+    "price": 110,
+    "prices": {
+      "Short": 110,
+      "Tall": 125,
+      "Grande": 140,
+      "Venti": 155
+    },
+    "calories": "280 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/signature-chocolate-1777536418839.png",
+    "description": "นมผสมน้ำเชื่อมช็อกโกแลต ท็อปด้วยวิปครีมและซอสช็อกโกแลต หอมหวานเข้มข้น",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "chocolate",
+      "sweet",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_steamed_milk",
+    "name_th": "นมสด",
+    "name_en": "Steamed Milk",
+    "category": "chocolate",
+    "subcategory": "other_beverage",
+    "price": 100,
+    "prices": {
+      "Short": 100,
+      "Tall": 115,
+      "Grande": 130,
+      "Venti": 145
+    },
+    "calories": "180 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/hot-milk-1777536317682.png",
+    "description": "นมสดอุ่นร้อน นุ่มละมุน ดื่มง่าย สบายท้อง",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_starbucks_yuzu_aerogano",
+    "name_th": "สตาร์บัคส์ ยูสุ แอโร่กาโน่",
+    "name_en": "Starbucks Yuzu Aerogano",
+    "category": "espresso",
+    "subcategory": "iced_special",
+    "price": 155,
+    "prices": {
+      "Tall": 155,
+      "Grande": 170,
+      "Venti": 185
+    },
+    "calories": "120 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/starbucks-yuzu-aerocano-1785840038184.jpg",
+    "description": "เครื่องดื่มที่นำช็อตเอสเพรสโซ่เข้มข้น น้ำแข็ง และซอสยูสุ ไปผ่านการอัดอากาศทำให้ได้เครื่องดื่มที่มีฟองละเอียดและรสสัมผัสที่นุ่มละมุน",
+    "is_new": true,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "fruity_refreshing",
+      "coffee_strong"
+    ]
+  },
+  {
+    "id": "sbux_starbucks_aerogano",
+    "name_th": "สตาร์บัคส์ แอโร่กาโน่",
+    "name_en": "Starbucks Aerogano",
+    "category": "espresso",
+    "subcategory": "iced_special",
+    "price": 130,
+    "prices": {
+      "Tall": 130,
+      "Grande": 145,
+      "Venti": 160
+    },
+    "calories": "15 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/starbucks-aerocano-1779975078158.jpg",
+    "description": "เครื่องดื่มที่นำช็อตเอสเพรสโซ่เข้มข้นและน้ำแข็ง ไปผ่านการอัดอากาศทำให้ได้เครื่องดื่มที่มีฟองละเอียดและรสสัมผัสที่นุ่มละมุน",
+    "is_new": true,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "coffee_strong"
+    ]
+  },
+  {
+    "id": "sbux_brown_sugar_cold_brew",
+    "name_th": "บราวน์ ชูการ์ โคลด์ บรูว์",
+    "name_en": "Brown Sugar Cold Brew",
+    "category": "cold_brew",
+    "subcategory": "cold_brew",
+    "price": 155,
+    "prices": {
+      "Tall": 155,
+      "Grande": 170,
+      "Venti": 185
+    },
+    "calories": "140 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/salted-caramel-cold-brew-1777531506209.png",
+    "description": "กาแฟสกัดเย็นเข้มข้น ที่มาพร้อมความหอมหวานของน้ำเชื่อมบราวน์ ชูการ์ที่ผสมในโคลด์โฟมและซอสคาราเมลด้านบน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": false,
+    "is_beverage": true,
+    "prep_types": [
+      "iced"
+    ],
+    "flavor_notes": [
+      "caramel",
+      "coffee_strong",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_shibuya_honey_toast",
+    "name_th": "ชิบูย่าฮันนี่โทสต์",
+    "name_en": "Shibuya Honey Toast",
+    "category": "bakery",
+    "subcategory": "dessert",
+    "price": 165,
+    "prices": {
+      "Standard": 165
+    },
+    "calories": "420 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/shibuya-honey-toast-1777708335122.png",
+    "description": "ขนมปังโทสต์เนื้อนุ่มชุ่มเนย ราดน้ำผึ้งหอมหวาน เสิร์ฟร้อนๆ คู่กับวิปครีมหรือไอศกรีม",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "sweet",
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_classic_apple_pie",
+    "name_th": "พายแอปเปิ้ลและไอศครีม",
+    "name_en": "Classic Apple Pie with Ice Cream",
+    "category": "bakery",
+    "subcategory": "pie",
+    "price": 155,
+    "prices": {
+      "Standard": 155
+    },
+    "calories": "380 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/classic-apple-pie-with-ice-cream-1777708175671.png",
+    "description": "พายแอปเปิ้ลหอมกรุ่น อบใหม่ร้อนๆ เนื้อแอปเปิ้ลชุ่มฉ่ำผสมซินนามอน เสิร์ฟพร้อมไอศกรีมวานิลลา",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "sweet",
+      "fruity_refreshing"
+    ]
+  },
+  {
+    "id": "sbux_espresso_choc_chip_brownie",
+    "name_th": "บราวนี่เอสเพรสโซ่ช็อคโกแลตชิพ",
+    "name_en": "Espresso Choc Chip Brownie",
+    "category": "bakery",
+    "subcategory": "cake",
+    "price": 85,
+    "prices": {
+      "Standard": 85
+    },
+    "calories": "310 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/espresso-choc-chip-brownie-1777708726005.png",
+    "description": "บราวนี่เนื้อฟัดจ์เข้มข้น ผสมผสานช็อตเอสเพรสโซ่และช็อกโกแลตชิพกรุบกรอบ",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [],
+    "flavor_notes": [
+      "chocolate",
+      "coffee_strong",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_chocolate_hazelnut_croissant",
+    "name_th": "ครัวซองท์ช็อกโกแลตเฮเซลนัท",
+    "name_en": "Chocolate Hazelnut Croissant",
+    "category": "bakery",
+    "subcategory": "croissant",
+    "price": 85,
+    "prices": {
+      "Standard": 85
+    },
+    "calories": "340 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/chocolate-hazelnut-croissant-1777707569638.png",
+    "description": "ครัวซองต์เนยสดฝรั่งเศส สอดไส้ช็อกโกแลตเฮเซลนัทเข้มข้น หอมกรุ่นทุกคำ",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "chocolate",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_cinnamon_swirl",
+    "name_th": "เดนิชซินนามอน",
+    "name_en": "Cinnamon Swirl",
+    "category": "bakery",
+    "subcategory": "danish",
+    "price": 75,
+    "prices": {
+      "Standard": 75
+    },
+    "calories": "290 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/cinnamon-swirl-1777707287756.png",
+    "description": "เดนิชอบกรอบม้วนเกลียว กลิ่นหอมซินนามอนและน้ำตาลไอซิ่งละมุนลิ้น",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_cheese_croissant",
+    "name_th": "ครัวซองท์ชีส",
+    "name_en": "Cheese Croissant",
+    "category": "bakery",
+    "subcategory": "croissant",
+    "price": 75,
+    "prices": {
+      "Standard": 75
+    },
+    "calories": "280 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/cheese-croissant-1777707191665.png",
+    "description": "ครัวซองต์เนยสดหอมกรอบ โรยหน้าด้วยชีสเข้มข้น อบจนเหลืองทองน่าทาน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_strawberry_tart",
+    "name_th": "ทาร์ตสตรอเบอร์รี่",
+    "name_en": "Strawberry Tart",
+    "category": "bakery",
+    "subcategory": "tart",
+    "price": 160,
+    "prices": {
+      "Standard": 160
+    },
+    "calories": "260 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/strawberry-tart-1777706004432.png",
+    "description": "ทาร์ตกรอบสไตล์ฝรั่งเศส ท็อปด้วยสตรอว์เบอร์รีสดลูกโตและครีมคัสตาร์ดนุ่มละมุน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [],
+    "flavor_notes": [
+      "fruity_refreshing",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_lemon_tart",
+    "name_th": "ทาร์ตเลมอน",
+    "name_en": "Lemon Tart",
+    "category": "bakery",
+    "subcategory": "tart",
+    "price": 140,
+    "prices": {
+      "Standard": 140
+    },
+    "calories": "240 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/lemon-tart-1777706930279.png",
+    "description": "ทาร์ตเลมอนครีมเปรี้ยวอมหวาน สดชื่นตัดเลี่ยนได้อย่างลงตัว",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [],
+    "flavor_notes": [
+      "fruity_refreshing",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_almond_florentine_cookie",
+    "name_th": "คุกกี้อัลมอนด์ฟลอเรนทีน",
+    "name_en": "Almond Florentine Cookie",
+    "category": "bakery",
+    "subcategory": "cookie",
+    "price": 75,
+    "prices": {
+      "Standard": 75
+    },
+    "calories": "190 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/almond-florentine-cookie-1777709042183.png",
+    "description": "คุกกี้กรุบกรอบเคลือบคาราเมลและอัลมอนด์สไลซ์เต็มแผ่น หวานมันเคี้ยวเพลิน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [],
+    "flavor_notes": [
+      "caramel",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_caramel_macchiato_popcorn",
+    "name_th": "ป๊อปคอร์นรสคาราเมลมัคคิอาโต",
+    "name_en": "Caramel Macchiato Popcorn & Pretzel",
+    "category": "bakery",
+    "subcategory": "snack",
+    "price": 65,
+    "prices": {
+      "Standard": 65
+    },
+    "calories": "160 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/caramel-macchiato-popcorn-pretzel-1777709186401.png",
+    "description": "ป๊อปคอร์นและเพรทเซลเคลือบซอสคาราเมลมัคคิอาโต หอมกลิ่นกาแฟและคาราเมลเข้มข้น",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [],
+    "flavor_notes": [
+      "caramel",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_spinach_bacon_danish",
+    "name_th": "สปิแนชเบคอนเดนิช",
+    "name_en": "Spinach Bacon Danish",
+    "category": "bakery",
+    "subcategory": "danish",
+    "price": 95,
+    "prices": {
+      "Standard": 95
+    },
+    "calories": "310 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/spinach-bacon-danish-1777967082579.jpg",
+    "description": "เดนิชอบกรอบสอดไส้ผักโขม เบคอนรมควัน และชีสหอมมัน เสิร์ฟอุ่นร้อนอร่อยเต็มคำ",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "milky_smooth"
+    ]
+  },
+  {
+    "id": "sbux_paris_ham_cheese_bagel",
+    "name_th": "เบเกิลปารีสแฮม & ชีส ซอสศรีราชา",
+    "name_en": "Paris Ham & Cheese Sriracha Bagel",
+    "category": "bakery",
+    "subcategory": "sandwich",
+    "price": 145,
+    "prices": {
+      "Standard": 145
+    },
+    "calories": "360 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/paris-ham-cheese-sriracha-mayo-bagel-1779979150143.jpg",
+    "description": "เบเกิลเนื้อหนึบประกบปารีสแฮม ชีสเยิ้มๆ และซอสศรีราชามาโยรสจัดจ้าน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": []
+  },
+  {
+    "id": "sbux_apple_puff",
+    "name_th": "พัฟแอปเปิล",
+    "name_en": "Apple Puff",
+    "category": "bakery",
+    "subcategory": "puff",
+    "price": 85,
+    "prices": {
+      "Standard": 85
+    },
+    "calories": "270 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/apple-puff-1784208949680.jpg",
+    "description": "พัฟแป้งพายบางกรอบ สอดไส้เนื้อแอปเปิ้ลหวานฉ่ำหอมกลิ่นซินนามอน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [
+      "hot"
+    ],
+    "flavor_notes": [
+      "fruity_refreshing",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_caramel_tart",
+    "name_th": "ทาร์ตคาราเมล",
+    "name_en": "Caramel Tart",
+    "category": "bakery",
+    "subcategory": "tart",
+    "price": 140,
+    "prices": {
+      "Standard": 140
+    },
+    "calories": "290 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/caramel-tart-1777705888955.png",
+    "description": "ทาร์ตกรุบกรอบ สอดไส้คาราเมลเนื้อเนียน หอมหวานเข้มข้นโดนใจสายหวาน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [],
+    "flavor_notes": [
+      "caramel",
+      "sweet"
+    ]
+  },
+  {
+    "id": "sbux_snowball_cookies",
+    "name_th": "สโนว์บอลคุกกี้",
+    "name_en": "Snowball Cookies",
+    "category": "bakery",
+    "subcategory": "cookie",
+    "price": 65,
+    "prices": {
+      "Standard": 65
+    },
+    "calories": "170 kcal",
+    "image_url": "https://blob.starbucks.co.th/publicproduct26/snowball-cookies-1777711508185.png",
+    "description": "คุกกี้เนยสดทรงกลม คลุกเคล้าน้ำตาลไอซิ่ง ละลายในปาก หอมละมุน",
+    "is_new": false,
+    "is_promo": false,
+    "promo_text": "",
+    "is_food": true,
+    "is_beverage": false,
+    "prep_types": [],
+    "flavor_notes": [
+      "sweet",
+      "milky_smooth"
+    ]
+  }
+]
