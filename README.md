@@ -50,16 +50,19 @@ starbug/
 ├── app.py                     # เซิร์ฟเวอร์หลัก Flask (LINE Webhook /callback + Web Simulator API)
 ├── config.py                  # ค่ากำหนดระบบ และ LINE Channel Secret / Token
 ├── setup_rich_menu.py         # สคริปต์สร้างและลงทะเบียน LINE Rich Menu อัตโนมัติ
+├── docs/                      # เอกสารอธิบายสถาปัตยกรรมและฟีเจอร์ฉบับละเอียด
+│   └── system_architecture_and_features.md
 ├── data/
 │   ├── scraper.py             # Data Loader & Scraper โหลดข้อมูลเมนูพร้อม Hot-Reload
 │   ├── cleaner.py             # Data Normalizer & Attribute Cleaner
 │   └── starbucks_menu.json    # ฐานข้อมูล 64 เมนูแท้ (ราคาแยกไซส์, แคลอรี่, หมวดหมู่, ภาพ CDN)
 ├── nlp/
 │   ├── normalizer.py          # PyThaiNLP Normalizer และพจนานุกรมแก้คำสะกดผิด
-│   ├── intents.py             # กำหนด Intent Types (12 หมวดหมู่)
+│   ├── intents.py             # กำหนด Intent Types
 │   ├── entity_extractor.py    # สกัดราคา (Min/Max), ขนาดแก้ว (Tall/Grande/Venti), รสชาติ, หมวดหมู่
+│   ├── bert_classifier.py     # BERT-based Semantic Vector Space Intent Classifier
 │   ├── engine.py              # NLP Matcher (Longest Substring Match + RapidFuzz Scorer)
-│   └── funny_features.py      # บทสนทนาฮาๆ สไตล์ภารตะ (ดูดวง, สูตรลับ, บาริสต้าปากแซ่บ)
+│   └── funny_features.py      # บทสนทนาฮาๆ สไตล์ภารตะ (บาริสต้าปากแซ่บ)
 ├── recommender/
 │   ├── filter_engine.py       # Multi-criteria Filter (งบประมาณ, ประเภท, กาแฟ/ขนม, รสชาติ)
 │   └── fair_randomizer.py     # Top-5 Anti-Repetition Buffer สุ่มกระจายตัวเป็นธรรม
@@ -68,8 +71,6 @@ starbug/
 │   ├── flex_detail.py         # LINE Flex Card แสดงราคาทุกไซส์และแคลอรี่
 │   ├── flex_receipt.py        # LINE Flex Card ใบเสร็จสั่งซื้อ Dynamic Price
 │   ├── flex_promo.py          # LINE Flex Carousel โปรโมชั่น
-│   ├── flex_fortune.py        # LINE Flex Card ดูดวงกาแฟ
-│   ├── flex_secret.py         # LINE Flex Card สูตรลับพิเศษ
 │   ├── quick_replies.py       # ปุ่ม Quick Reply ลอยด้านล่าง 5 ปุ่ม
 │   └── rich_menu.py           # ตัวสร้างรูปภาพ Rich Menu 2500x1686
 ├── web/                       # Web Chat Simulator สำหรับทดสอบผ่านบราวเซอร์
@@ -127,7 +128,7 @@ cloudflared tunnel --url http://localhost:5000
 | หัวข้อการทดสอบ | รายละเอียดและเป้าหมาย | ผลการทดสอบจริง | สถานะ |
 |---|---|---|---|
 | **1. Scraping & Data Integrity** | ทดสอบความทนทานต่อ HTML ข้อมูลราคาขาดหาย และความพร้อมของไฟล์ภาพ | ผ่านการทดสอบ 100% มีรูปภาพครบทั้ง 64 รายการ | ✅ PASS |
-| **2. NLP Accuracy & Speed** | ทดสอบ 37 Test Cases (คำแสลง, คำสะกดผิด, เงื่อนไขหลายชั้น) | **Accuracy: 100.00%** (เป้าหมาย >85%)<br>**Avg Latency: ~3.5 ms** (เป้าหมาย <1,500 ms) | ✅ PASS |
+| **2. NLP Accuracy & Speed** | ทดสอบ 35 Test Cases (คำแสลง, คำสะกดผิด, เงื่อนไขหลายชั้น) | **Accuracy: 100.00%** (เป้าหมาย >85%)<br>**Avg Latency: ~3.6 ms** (เป้าหมาย <1,500 ms) | ✅ PASS |
 | **3. Randomization Fairness** | จำลอง Monte Carlo 100+ รอบ เพื่อตรวจสอบการกระจายตัวของ Top-5 | **Coverage: 100.0%** กระจายตัวครบทุกเมนู ไม่ติดลูปซ้ำ | ✅ PASS |
 
 ### คำสั่งรันการทดสอบทั้งหมด:
