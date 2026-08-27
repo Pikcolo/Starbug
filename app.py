@@ -17,9 +17,8 @@ from line_ui.flex_carousel import create_product_carousel_flex
 from line_ui.flex_detail import create_product_detail_flex
 from line_ui.flex_promo import create_promotions_carousel
 from line_ui.flex_receipt import create_order_confirmation_flex
-from line_ui.flex_funny import create_fortune_flex, create_secret_recipe_flex
 from line_ui.quick_replies import get_default_quick_replies
-from nlp.funny_features import get_random_fortune, get_random_secret_recipe, get_random_barista_roast
+from nlp.funny_features import get_random_barista_roast
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
@@ -104,9 +103,7 @@ def process_query_and_build_response(query: str, session_id: str = "default_user
             "5. 🛒 **สั่งของกิน:** 'สั่งซื้อ Green Tea Cream Frappuccino 1 แก้ว'\n"
             "6. 🏷️ **ล่าโปรโมชั่น:** 'มีโปรโมชั่นอะไรบ้าง'\n"
             "7. ⭐ **คิดไม่ออก:** 'เมนูแนะนำวันนี้' หรือ 'กินอะไรดี'\n"
-            "8. 🔮 **สายมูภารตะ:** 'ดูดวงกาแฟให้หน่อย วันนี้เป็นไงบ้าง'\n"
-            "9. 🧪 **สูตรลับดอลลี่:** 'ขอสูตรลับสตาร์บัคส์หน่อย'\n"
-            "10. 🤣 **หาเรื่องโดนแซว:** 'แซวฉันหน่อย บาริสต้าปากแซ่บนะจ๊ะ'"
+            "8. 🤣 **หาเรื่องโดนแซว:** 'แซวฉันหน่อย บาริสต้าปากแซ่บนะจ๊ะ'"
         )
         candidates = get_menu_data()
         items_shown = format_item_images(get_top_5_recommendations(candidates, session_id=session_id), base_url=base_url)
@@ -169,29 +166,6 @@ def process_query_and_build_response(query: str, session_id: str = "default_user
                 "🌐 กดปุ่มด้านล่างเพื่อเปิดหน้าเว็บ Starbug และชำระเงินต่อได้ทันทีนะจ๊ะ!"
             )
             flex_payload = create_order_confirmation_flex()
-
-    elif intent == IntentType.FORTUNE.value:
-        fortune_data = get_random_fortune()
-        reply_text = (
-            f"🔮 **หมอดูบาริสต้า Starbug ขอทำนายดวงชะตานะจ๊ะนายจ๋า!**\n\n"
-            f"{fortune_data['topic']}\n"
-            f"📖 {fortune_data['fortune']}\n\n"
-            f"✨ เมนูเสริมดวงประจำวัน: {fortune_data['lucky_drink']}\n"
-            f"💡 เคล็ดลับ: {fortune_data['tip']}"
-        )
-        flex_payload = create_fortune_flex(fortune_data)
-
-    elif intent == IntentType.SECRET_RECIPE.value:
-        recipe_data = get_random_secret_recipe()
-        reply_text = (
-            f"🧪 **สูตรลับ Starbug ฉบับดอลลี่ ชัยวาลา ในตำนานนะจ๊ะนายจ๋า!**\n\n"
-            f"{recipe_data['title']}\n"
-            f"📌 เมนูหลัก: {recipe_data['base']}\n"
-            f"🪄 สั่งเพิ่ม: {recipe_data['custom']}\n"
-            f"✨ สรรพคุณ: {recipe_data['effect']}\n\n"
-            f"🗣️ โพยพูดสั่งหน้าร้าน:\n\"{recipe_data['script_to_order']}\""
-        )
-        flex_payload = create_secret_recipe_flex(recipe_data)
 
     elif intent == IntentType.BARISTA_ROAST.value:
         roast_text = get_random_barista_roast()
@@ -409,7 +383,7 @@ if handler:
     @handler.add(MessageEvent, message=StickerMessageContent)
     def handle_line_sticker(event):
         user_id = event.source.user_id if hasattr(event.source, "user_id") else "line_user"
-        reply_text = "👳‍♂️ สติกเกอร์น่ารักสะบัดส่าหรีเลยนะจ๊ะนายจ๋า! ✨ วันนี้นายจ๋าอยากรับกาแฟสด ขนมเค้ก หรือจะให้บาริสต้าดอลลี่ดูดวงให้ดีจ๊ะ? ☕🔮"
+        reply_text = "👳‍♂️ สติกเกอร์น่ารักสะบัดส่าหรีเลยนะจ๊ะนายจ๋า! ✨ วันนี้นายจ๋าอยากรับกาแฟสด ขนมเค้ก หรือจะให้บาริสต้าดอลลี่จัดเสิร์ฟเมนูไหนดีจ๊ะ? ☕🥐"
         
         quick_reply_items = []
         for q_item in get_default_quick_replies().get("items", []):

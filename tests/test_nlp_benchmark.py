@@ -65,8 +65,6 @@ TEST_SUITE = [
     {"query": "สั่งเครื่องดื่มนี้ทันที", "expected_intent": IntentType.ORDER.value},
 
     # 11. Funny & Interactive Features
-    {"query": "ดูดวงกาแฟให้หน่อย วันนี้เป็นไงบ้าง", "expected_intent": IntentType.FORTUNE.value},
-    {"query": "ขอสูตรลับสตาร์บัคส์หน่อย", "expected_intent": IntentType.SECRET_RECIPE.value},
     {"query": "แซวฉันหน่อย บาริสต้าปากแซ่บ", "expected_intent": IntentType.BARISTA_ROAST.value}
 ]
 

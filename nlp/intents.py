@@ -17,20 +17,12 @@ class IntentType(str, Enum):
     SEARCH_FOOD = "SEARCH_FOOD"
     ITEM_DETAIL = "ITEM_DETAIL"
     ORDER = "ORDER"
-    FORTUNE = "FORTUNE"
-    SECRET_RECIPE = "SECRET_RECIPE"
     BARISTA_ROAST = "BARISTA_ROAST"
     UNKNOWN = "UNKNOWN"
 
 
 # Patterns mapping for high precision matching
 INTENT_PATTERNS: Dict[IntentType, List[str]] = {
-    IntentType.FORTUNE: [
-        "ดูดวง", "ทำนายดวง", "ดวง", "กาแฟทำนายดวง", "ดวงวันนี้", "ดวงการงาน", "ดวงความรัก", "ดวงการเงิน", "หมอดู", "เซียมซี", "fortune", "horoscope"
-    ],
-    IntentType.SECRET_RECIPE: [
-        "สูตรลับ", "เมนูแปลก", "เมนูลับ", "สูตรพิสดาร", "เมนูป่วน", "secret menu", "สูตรกวน", "เมนูในตำนาน", "custom แปลก"
-    ],
     IntentType.BARISTA_ROAST: [
         "แซวหน่อย", "บ่นหน่อย", "บาริสต้าปากแซ่บ", "ด่าหน่อย", "ทายนิสัย", "แซวฉันหน่อย", "roast", "แซว"
     ],

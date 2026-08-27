@@ -55,15 +55,7 @@ class NLPEngine:
         if ("คำสั่ง" not in norm) and (any(norm.startswith(kw) for kw in ["สั่งซื้อ", "สั่งเมนู", "สั่งเครื่องดื่ม", "สั่งแก้วนี้", "สั่ง", "order", "ซื้อ"]) or any(kw in norm for kw in INTENT_PATTERNS[IntentType.ORDER])):
             return IntentType.ORDER, 0.98
 
-        # 4. Fortune Teller / Horoscope (ดวงชะตา)
-        if any(kw in norm for kw in INTENT_PATTERNS[IntentType.FORTUNE]):
-            return IntentType.FORTUNE, 0.96
-
-        # 5. Secret / Weird Custom Recipes (สูตรลับสายป่วน)
-        if any(kw in norm for kw in INTENT_PATTERNS[IntentType.SECRET_RECIPE]):
-            return IntentType.SECRET_RECIPE, 0.96
-
-        # 6. Sassy Barista Roast (แซว/บ่น/ทายนิสัย)
+        # 4. Sassy Barista Roast (แซว/บ่น/ทายนิสัย)
         if any(kw in norm for kw in INTENT_PATTERNS[IntentType.BARISTA_ROAST]):
             return IntentType.BARISTA_ROAST, 0.95
 
