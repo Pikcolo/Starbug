@@ -133,7 +133,7 @@ def process_query_and_build_response(query: str, session_id: str = "default_user
                     f"⏱️ เวลารอประมาณ 10-15 นาที (หรือจนกว่าโรตีจะสุก 🤣)\n\n"
                     f"🌐 กดปุ่มด้านล่างเพื่อเปิดหน้าเว็บ Starbug ไปชำระเงินต่อได้ทันทีเลยนะจ๊ะนายจ๋า!"
                 )
-                flex_payload = create_order_confirmation_flex(order_item=dict(item, price=price, selected_size=size_label))
+                flex_payload = create_order_confirmation_flex(item=dict(item, price=price, selected_size=size_label))
                 items_shown = [dict(item, price=price, selected_size=size_label)]
 
             # Case 2: Mentioned specific item but hasn't selected size yet -> Show Detail & Size Selection Card
