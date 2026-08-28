@@ -3,8 +3,9 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Flask](https://img.shields.io/badge/Flask-3.1.3-green.svg)](https://flask.palletsprojects.com/)
 [![LINE Bot SDK](https://img.shields.io/badge/LINE_Bot_SDK-v3-00c300.svg)](https://developers.line.biz/)
+[![Sentence Transformers](https://img.shields.io/badge/BERT-MiniLM--L12--v2-orange.svg)](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2)
 [![PyThaiNLP](https://img.shields.io/badge/PyThaiNLP-5.3+-brightgreen.svg)](https://github.com/PyThaiNLP/pythainlp)
-[![RapidFuzz](https://img.shields.io/badge/RapidFuzz-3.14+-orange.svg)](https://github.com/maxbachmann/RapidFuzz)
+[![RapidFuzz](https://img.shields.io/badge/RapidFuzz-3.14+-yellow.svg)](https://github.com/maxbachmann/RapidFuzz)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 
 > [!NOTE]
@@ -12,7 +13,7 @@
 > This project is developed strictly for **educational, academic, and non-commercial research purposes** as part of the university coursework (*AI for Social*). All brand assets, product names, images, and menu data belong to their respective copyright holders (Starbucks Corporation / Starbucks Thailand). "Starbug" is a parody and simulation project designed to explore Thai Natural Language Processing (NLP), recommendation algorithms, and conversational UI engineering.
 
 ## 📖 English Overview
-**Starbug** is an AI-powered conversational assistant built for the LINE Messaging Platform and Web. It simulates an intelligent, entertaining virtual barista featuring a complete 64-item catalog, real-time Thai NLP intent classification, multi-criteria menu filtering, dynamic cup size pricing, and interactive LINE Flex Message carousels.
+**Starbug** is an AI-powered conversational assistant built for the LINE Messaging Platform and Web. It simulates an intelligent, entertaining virtual barista featuring a complete 64-item catalog, real-time Neural BERT Thai NLP intent classification, multi-criteria menu filtering, dynamic cup size pricing, interactive 2-step ordering, and LINE Flex Message carousels.
 
 ---
 
@@ -27,18 +28,19 @@
    - รองรับเมนูใหม่ล่าสุด **New Arrivals** (เช่น คาราเมลพุดดิ้งแฟรปปูชิโน่, ที-รามิสุครีม, ยูสุแอโร่กาโน่)
    - ภาพประกอบความละเอียดสูงจาก CDN ทางการของ Starbucks Thailand แคชพร้อมเสิร์ฟครบทุกเมนู 100%
 
-3. **📏 ระบบคิดราคา Dynamic Price แยกตามขนาดแก้ว**:
-   - ตรวจจับขนาดแก้วอัตโนมัติ: `Solo`, `Doppio`, `Short`, `Tall`, `Grande`, `Venti`
-   - คำนวณราคาและออกใบเสร็จ (Order Receipt) ตรงตามขนาดจริง เช่น Venti = ฿195 / Grande = ฿180 / Tall = ฿165
+3. **🧠 Neural Multilingual BERT & 4-Tier Hybrid NLP Engine**:
+   - **Deep Transformer Embedding:** ขับเคลื่อนด้วย `SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")` แปลงประโยคเป็นเวกเตอร์ 384 มิติ เข้าใจภาษาพูด แสลง และประโยคเปรียบเปรยอย่างแม่นยำ
+   - **150+ Typo Correction Dictionary:** คลังคำแก้คำพิมพ์ผิดเฉพาะทาง 150+ คำ (กาเเฟ, ชาเขีบว, เวนตี้, ครัวซองค์ ฯลฯ)
+   - **RapidFuzz Fuzzy Matcher:** ดักจับชื่อเมนูใกล้เคียงด้วย Levenshtein Distance (Threshold >= 70%)
+   - **Accuracy 100.00% & Latency ~5.3 ms** ผ่าน 36 Benchmark Test Cases ทั้งหมด
 
-4. **⚡ Thai NLP Engine ความเร็วและความแม่นยำสูง**:
-   - **Accuracy 100.00%** (ผ่านทุก Test Case ครอบคลุมคำสั่งซับซ้อน)
-   - **Average Latency ต่ำเพียง ~3.5 ms** (เร็วกว่าเกณฑ์ 1.5 วินาที อย่างมาก)
-   - รองรับคำแสลง, ภาษาพูด, และแก้คำสะกดผิดอัตโนมัติ (Typo Correction เช่น `กาเเฟเยน`, `ชาเขีบว`, `โปโมชั่น`, `แฟรปเป้`)
+4. **🛍️ Interactive 2-Step Ordering & Dynamic Size Pricing**:
+   - **2-Step Order Flow:** เมื่อระบุชื่อเมนูเจาะจง บอทจะส่งการ์ดรายละเอียดพร้อมปุ่มให้กดเลือกขนาดแก้วจริงก่อนสั่ง
+   - **Dynamic Price Mapper:** คำนวณราคาและออกใบเสร็จ (Order Receipt) ตรงตามขนาดแก้วจริง: `Solo/Doppio` หรือ `Tall/Grande/Venti`
 
 5. **📱 รองรับ LINE Full-Stack UX (Rich Menu + Quick Reply + Flex UI)**:
    - **6-Grid Rich Menu**: เมนูลัด 6 ช่อง กราฟิกคมชัด สั่งงานได้ในคลิกเดียว (`setup_rich_menu.py`)
-   - **5 Quick Reply Pills**: เมนูแนะนำวันนี้, กาแฟสด, เบเกอรี่, โปรโมชั่นเด็ด, บาริสต้าปากแซ่บ
+   - **Quick Reply Chips**: เมนูแนะนำวันนี้, กาแฟสด, เบเกอรี่, โปรโมชั่นเด็ด, วิธีการใช้งาน, บาริสต้าปากแซ่บ
    - **LINE Flex Carousel & Detail**: การ์ดแสดงราคาทุกขนาด แคลอรี่ และปุ่มกดสั่งซื้อเปิดสู่หน้าเว็บทันที
 
 ---
