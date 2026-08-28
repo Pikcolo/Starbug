@@ -81,6 +81,8 @@ def filter_menu(nlp_result: Dict[str, Any], catalog: List[Dict[str, Any]] = None
             item_flavors = item.get("flavor_notes", [])
             if any(f in item_flavors for f in flavors):
                 flavor_filtered.append(item)
+        if "coffee_strong" in flavors:
+            flavor_filtered = [item for item in flavor_filtered if item.get("is_beverage")]
         if flavor_filtered:
             filtered = flavor_filtered
 

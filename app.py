@@ -188,10 +188,12 @@ def process_query_and_build_response(query: str, session_id: str = "default_user
             reply_text = "🍵 เมนูชาเขียวมัทฉะ และชาพรีเมียม Teavana รสเลิศกลิ่นหอมชื่นใจนะจ๊ะนายจ๋า:"
         elif "frappuccino" in cats:
             reply_text = "🥤 เมนูเครื่องดื่มปั่น Frappuccino หวานฉ่ำเย็นชื่นใจถึงทรวงนะจ๊ะนายจ๋า:"
-        elif "espresso" in cats or "cold_brew" in cats:
-            reply_text = "☕ เมนูกาแฟสดและเอสเพรสโซ่เข้มข้นสะใจ ตาค้างถึงวันพรุ่งนี้นะจ๊ะนายจ๋า:"
-        elif "refresher" in cats:
+        elif "espresso" in cats or "cold_brew" in cats or "coffee_strong" in entities.get("flavor_moods", []):
+            reply_text = "☕ เมนูกาแฟสดเข้มข้นสะใจ ดื่มแล้วตาสว่างดีดถึงวันพรุ่งนี้แน่นอนนะจ๊ะนายจ๋า:"
+        elif "refresher" in cats or "fruity_refreshing" in entities.get("flavor_moods", []):
             reply_text = "🍓 เมนูรีเฟรชเชอร์และน้ำผลไม้สดชื่นดับร้อน สดชื่นสะบัดส่าหรีนะจ๊ะนายจ๋า:"
+        elif "sweet" in entities.get("flavor_moods", []):
+            reply_text = "🍯 เมนูเครื่องดื่มหวานฉ่ำละมุนลิ้น เติมความสดชื่นให้นายจ๋าแล้วจ้า:"
         else:
             reply_text = "☕ เมนู Starbug สุดฮิตที่คัดมาให้นายจ๋าโดยเฉพาะเลยนะจ๊ะ:"
 

@@ -26,7 +26,7 @@ FLAVOR_MOOD_KEYWORDS = {
     "chocolate": ["ช็อกโกแลต", "โกโก้", "มอคค่า", "chocolate", "cocoa", "mocha"],
     "caramel": ["คาราเมล", "caramel"],
     "vanilla": ["วานิลลา", "vanilla"],
-    "coffee_strong": ["เข้ม", "ตื่น", "กาแฟดำ", "เข้มข้น", "strong", "dark"],
+    "coffee_strong": ["เข้ม", "ตื่น", "ง่วง", "ง่วงนอน", "ตาสว่าง", "ตาค้าง", "ดีด", "กาแฟดำ", "เข้มข้น", "strong", "dark"],
     "fruity_refreshing": ["สดชื่น", "เปรี้ยว", "ผลไม้", "เลมอน", "สดใส", "refreshing", "fruity", "berry"],
     "milky_smooth": ["นม", "นุ่ม", "ละมุน", "มัน", "smooth", "milky"],
     "sweet": ["หวาน", "หวานๆ", "sweet"]
