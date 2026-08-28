@@ -82,11 +82,13 @@ class NLPEngine:
         # 9. Direct Product Name Fuzzy Match (e.g. "Signature Chocolate Cake", "Iced Caffe Americano", "Green Tea Frappe", "จาวา ชิพ")
         generic_category_queries = {"กาแฟ", "กาแฟเย็น", "กาแฟร้อน", "ขอดูกาแฟ", "เมนูกาแฟ", "ชาเขียว", "ขอดูชาเขียว", "เมนูปั่น", "ขอดูเมนูปั่น", "ปั่น", "เค้ก", "ขนม", "เบเกอรี่", "อาหาร", "มีขนมอะไรบ้าง", "ขอดูขนม"}
         if self.search_corpus and norm not in generic_category_queries:
-            best_match = process.extractOne(norm, self.search_corpus, scorer=fuzz.token_set_ratio)
-            if best_match and best_match[1] >= 75:
-                matched_str = best_match[0]
-                if len(norm) >= 4 or best_match[1] >= 85:
-                    return IntentType.ITEM_DETAIL, round(best_match[1] / 100.0, 2)
+            best_set = process.extractOne(norm, self.search_corpus, scorer=fuzz.token_set_ratio)
+            best_part = process.extractOne(norm, self.search_corpus, scorer=fuzz.partial_ratio)
+            chosen_match = best_set if (best_set and best_part and best_set[1] >= best_part[1]) else (best_part or best_set)
+
+            if chosen_match and chosen_match[1] >= 70:
+                if len(norm) >= 4 or chosen_match[1] >= 85:
+                    return IntentType.ITEM_DETAIL, round(chosen_match[1] / 100.0, 2)
 
         # 10. Food / Bakery broad query
         if entities.get("is_food_query") or any(kw in norm for kw in INTENT_PATTERNS[IntentType.SEARCH_FOOD]):
@@ -105,6 +107,10 @@ class NLPEngine:
 
         # 13. BERT Semantic Embedding Prediction (handles complex phrasing & colloquialisms)
         bert_intent, bert_score = self.bert.predict(text)
+        # Safety guard: BARISTA_ROAST requires explicit roast keywords
+        if bert_intent == IntentType.BARISTA_ROAST:
+            if not any(kw in norm for kw in ["แซว", "ปากแซ่บ", "ด่า", "กวน", "บ่น", "roast", "มุก", "วิจารณ์"]):
+                bert_intent = IntentType.UNKNOWN
         if bert_intent != IntentType.UNKNOWN and bert_score >= 0.45:
             return bert_intent, bert_score
 
@@ -140,9 +146,11 @@ class NLPEngine:
                     matched_item = self.item_lookup[cand_name]
                     break
 
-            # Priority 2: Fuzzy matching
+            # Priority 2: Fuzzy matching (token_set_ratio & partial_ratio)
             if not matched_item:
-                best = process.extractOne(search_target, self.search_corpus, scorer=fuzz.token_set_ratio)
+                best_set = process.extractOne(search_target, self.search_corpus, scorer=fuzz.token_set_ratio)
+                best_part = process.extractOne(search_target, self.search_corpus, scorer=fuzz.partial_ratio)
+                best = best_set if (best_set and best_part and best_set[1] >= best_part[1]) else (best_part or best_set)
                 if best and best[1] >= 65:
                     matched_item = self.item_lookup.get(best[0])
                 elif not matched_item and intent == IntentType.ORDER:
