@@ -88,10 +88,6 @@ def process_query_and_build_response(query: str, session_id: str = "default_user
             "• 'เมนูแนะนำวันนี้'\n"
             "• 'แซวฉันหน่อย บาริสต้าปากแซ่บ'"
         )
-        # Show top general beverages
-        candidates = get_menu_data()
-        items_shown = format_item_images(get_top_5_recommendations(candidates, session_id=session_id), base_url=base_url)
-        flex_payload = create_product_carousel_flex(items_shown, "เมนู Starbug แนะนำสำหรับคุณ")
 
     elif intent == IntentType.HELP.value:
         reply_text = (
@@ -105,9 +101,6 @@ def process_query_and_build_response(query: str, session_id: str = "default_user
             "7. ⭐ **คิดไม่ออก:** 'เมนูแนะนำวันนี้' หรือ 'กินอะไรดี'\n"
             "8. 🤣 **หาเรื่องโดนแซว:** 'แซวฉันหน่อย บาริสต้าปากแซ่บนะจ๊ะ'"
         )
-        candidates = get_menu_data()
-        items_shown = format_item_images(get_top_5_recommendations(candidates, session_id=session_id), base_url=base_url)
-        flex_payload = create_product_carousel_flex(items_shown, "เมนูยอดนิยม Starbug")
 
     elif intent == IntentType.PROMOTIONS.value:
         promos = get_promotions_data()
@@ -201,8 +194,6 @@ def process_query_and_build_response(query: str, session_id: str = "default_user
             reply_text = "🍓 เมนูรีเฟรชเชอร์และน้ำผลไม้สดชื่นดับร้อน สดชื่นสะบัดส่าหรีนะจ๊ะนายจ๋า:"
         else:
             reply_text = "☕ เมนู Starbug สุดฮิตที่คัดมาให้นายจ๋าโดยเฉพาะเลยนะจ๊ะ:"
-
-        flex_payload = create_product_carousel_flex(items_shown, "เมนู Starbug แนะนำ")
 
         flex_payload = create_product_carousel_flex(items_shown, "เมนู Starbug แนะนำ")
 

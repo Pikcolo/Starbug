@@ -15,6 +15,7 @@ TEST_SUITE = [
     {"query": "หวัดดีจ้า", "expected_intent": IntentType.GREETING.value},
     {"query": "ช่วยด้วย ใช้ยังไง", "expected_intent": IntentType.HELP.value},
     {"query": "มีคำสั่งอะไรบ้าง", "expected_intent": IntentType.HELP.value},
+    {"query": "วิธีการใช้งาน", "expected_intent": IntentType.HELP.value},
 
     # 2. Promotions & Discounts
     {"query": "มีโปรโมชั่นอะไรบ้าง", "expected_intent": IntentType.PROMOTIONS.value},

@@ -47,6 +47,14 @@ def get_default_quick_replies() -> Dict[str, Any]:
                 "type": "action",
                 "action": {
                     "type": "message",
+                    "label": "📖 วิธีการใช้งาน",
+                    "text": "วิธีการใช้งาน"
+                }
+            },
+            {
+                "type": "action",
+                "action": {
+                    "type": "message",
                     "label": "🤣 บาริสต้าปากแซ่บ",
                     "text": "แซวฉันหน่อย บาริสต้าปากแซ่บ"
                 }
