@@ -50,13 +50,28 @@ INTENT_TRAINING_CORPUS = {
 
 
 class BERTSemanticClassifier:
-    """Contextual Semantic BERT & Vector Classifier for Intent Prediction."""
+    """Contextual Deep Neural BERT Semantic Embedding & Intent Classifier."""
 
-    def __init__(self):
-        self.vectorizer = TfidfVectorizer(tokenizer=tokenize_text, token_pattern=None)
+    def __init__(self, model_name: str = "paraphrase-multilingual-MiniLM-L12-v2"):
+        self.model_name = model_name
         self.doc_texts = []
         self.doc_labels = []
+        self.doc_embeddings = None
+        self.model = None
+
+        self._load_model()
         self._build_index()
+
+    def _load_model(self):
+        """Loads pretrained multilingual BERT transformer model."""
+        try:
+            from sentence_transformers import SentenceTransformer
+            self.model = SentenceTransformer(self.model_name)
+            logger.info(f"✅ Pretrained Neural BERT model '{self.model_name}' loaded successfully.")
+        except Exception as e:
+            logger.warning(f"Failed to load Neural BERT model '{self.model_name}': {e}. Using TF-IDF fallback.")
+            self.model = None
+            self.vectorizer = TfidfVectorizer(tokenizer=tokenize_text, token_pattern=None)
 
     def _build_index(self):
         """Constructs semantic embedding space from training intent corpus."""
@@ -66,22 +81,41 @@ class BERTSemanticClassifier:
                 self.doc_labels.append(intent)
 
         if self.doc_texts:
-            self.matrix = self.vectorizer.fit_transform(self.doc_texts)
+            if self.model is not None:
+                # Dense 384-dimensional BERT Embeddings
+                self.doc_embeddings = self.model.encode(self.doc_texts, convert_to_numpy=True, normalize_embeddings=True)
+            else:
+                # Sparse TF-IDF Vector space fallback
+                self.matrix = self.vectorizer.fit_transform(self.doc_texts)
 
     def predict(self, text: str) -> Tuple[IntentType, float]:
         """
-        Calculates cosine semantic similarity against the vector space.
+        Calculates cosine semantic similarity using BERT dense embeddings against the intent space.
         Returns the top matched Intent and confidence score (0.0 - 1.0).
         """
         if not text or not self.doc_texts:
             return IntentType.UNKNOWN, 0.0
 
         cleaned = normalize_text(text)
-        query_vec = self.vectorizer.transform([cleaned])
-        similarities = cosine_similarity(query_vec, self.matrix).flatten()
-        best_idx = int(np.argmax(similarities))
-        best_score = float(similarities[best_idx])
 
-        if best_score > 0.35:
-            return self.doc_labels[best_idx], round(best_score, 2)
-        return IntentType.UNKNOWN, round(best_score, 2)
+        if self.model is not None and self.doc_embeddings is not None:
+            query_embedding = self.model.encode([cleaned], convert_to_numpy=True, normalize_embeddings=True)
+            # Dot product of normalized vectors equals cosine similarity
+            similarities = np.dot(self.doc_embeddings, query_embedding.T).flatten()
+            best_idx = int(np.argmax(similarities))
+            best_score = float(similarities[best_idx])
+
+            if best_score > 0.45:
+                return self.doc_labels[best_idx], round(best_score, 2)
+            return IntentType.UNKNOWN, round(best_score, 2)
+        else:
+            # Fallback
+            query_vec = self.vectorizer.transform([cleaned])
+            similarities = cosine_similarity(query_vec, self.matrix).flatten()
+            best_idx = int(np.argmax(similarities))
+            best_score = float(similarities[best_idx])
+
+            if best_score > 0.35:
+                return self.doc_labels[best_idx], round(best_score, 2)
+            return IntentType.UNKNOWN, round(best_score, 2)
+

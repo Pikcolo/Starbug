@@ -9,3 +9,5 @@ requests>=2.30.0
 beautifulsoup4>=4.12.0
 python-dotenv>=1.0.0
 playwright>=1.40.0
+sentence-transformers>=3.0.0
+torch>=2.0.0
