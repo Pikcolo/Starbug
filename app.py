@@ -173,7 +173,16 @@ def process_query_and_build_response(query: str, session_id: str = "default_user
             reply_text = "⭐ Starbug คัดตัวท็อป 5 เมนูเด็ดสะบัดสะบั้นมาให้นายจ๋าแล้วจ้า เมนูไหนก็อร่อยฟินนะจ๊ะนายจ๋า:"
         elif intent == IntentType.PRICE_FILTER.value:
             max_p = entities.get("max_price")
-            reply_text = f"💰 เมนู Starbug สบายกระเป๋า (งบไม่เกิน ฿{max_p if max_p else 'ที่กำหนด'}) อร่อยคุ้มกระเป๋าไม่ฉีกนะจ๊ะนายจ๋า:"
+            if max_p and max_p < 65:
+                reply_text = (
+                    f"💸 โถ... นายจ๋า! งบ ฿{max_p} ที่ Starbug คงได้แค่ดมกลิ่นหอมๆ กับรอยยิ้มหวานๆ ของบาริสต้าดอลลี่นะจ๊ะ! 🤣✨\n\n"
+                    f"💰 เมนูที่ราคาย่อมเยาที่สุดในร้านเริ่มต้นที่ ฿65 - ฿85 (ของว่าง/เบเกอรี่) หรือ ฿100 (เอสเพรสโซ่ช็อตเข้มๆ) จ้ะ\n\n"
+                    f"👇 บาริสต้าดอลลี่คัด 5 เมนูที่ราคาประหยัดที่สุดมาให้นายจ๋าด้านล่างนี้นะจ๊ะ 🥐☕"
+                )
+            elif max_p:
+                reply_text = f"💰 เมนู Starbug สบายกระเป๋า (งบไม่เกิน ฿{max_p}) อร่อยคุ้มกระเป๋าไม่ฉีกนะจ๊ะนายจ๋า:"
+            else:
+                reply_text = "💰 เมนู Starbug ราคาสบายกระเป๋าสุดคุ้มนะจ๊ะนายจ๋า:"
         elif intent == IntentType.SEARCH_FOOD.value or "bakery" in cats:
             reply_text = "🥐 เมนูเบเกอรี่ เค้ก และของว่าง Starbug อบใหม่หอมฟุ้งเหมือนเตาทันดูร์พร้อมเสิร์ฟนะจ๊ะนายจ๋า:"
         elif "tea" in cats:

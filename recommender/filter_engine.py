@@ -44,7 +44,12 @@ def filter_menu(nlp_result: Dict[str, Any], catalog: List[Dict[str, Any]] = None
     max_p = entities.get("max_price")
     min_p = entities.get("min_price")
     if max_p is not None:
-        filtered = [item for item in filtered if item.get("price", 0) <= max_p]
+        price_matches = [item for item in filtered if item.get("price", 0) <= max_p]
+        if price_matches:
+            filtered = price_matches
+        else:
+            # Budget lower than any item in store: provide lowest priced items in ascending order
+            filtered = sorted(filtered, key=lambda x: x.get("price", 999))[:8]
     if min_p is not None:
         filtered = [item for item in filtered if item.get("price", 0) >= min_p]
 
