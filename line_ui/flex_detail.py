@@ -39,15 +39,18 @@ def create_product_detail_flex(item: Dict[str, Any]) -> Dict[str, Any]:
             if p > 0:
                 size_buttons.append({
                     "type": "button",
-                    "style": "secondary",
+                    "style": "primary",
                     "height": "sm",
-                    "color": "#EBF6F2",
+                    "color": "#006241",
                     "action": {
                         "type": "message",
                         "label": f"สั่ง {sz} (฿{p})",
                         "text": f"สั่งซื้อ {name_th} ขนาด {sz}"
                     }
                 })
+
+    single_size_label = list(prices.keys())[0] if prices else "Standard"
+    single_size_price = list(prices.values())[0] if prices else price
 
     bubble = {
         "type": "flex",
@@ -133,19 +136,20 @@ def create_product_detail_flex(item: Dict[str, Any]) -> Dict[str, Any]:
                                 "spacing": "xs",
                                 "contents": size_buttons
                             }
-                        ] if size_buttons else []
+                        ] if size_buttons else [
+                            {
+                                "type": "button",
+                                "style": "primary",
+                                "color": "#006241",
+                                "height": "sm",
+                                "action": {
+                                    "type": "message",
+                                    "label": f"สั่งซื้อทันที ฿{single_size_price} 🛍️",
+                                    "text": f"สั่งซื้อ {name_th} ขนาด {single_size_label}"
+                                }
+                            }
+                        ]
                     ),
-                    {
-                        "type": "button",
-                        "style": "primary",
-                        "color": "#006241",
-                        "height": "sm",
-                        "action": {
-                            "type": "message",
-                            "label": "สั่งสินค้ารายการนี้ 🛍️",
-                            "text": f"สั่งซื้อ {name_th}"
-                        }
-                    },
                     {
                         "type": "button",
                         "style": "secondary",

@@ -107,58 +107,50 @@ def process_query_and_build_response(query: str, session_id: str = "default_user
         reply_text = "🎉 รวมโปรโมชั่นและดีลลับ Starbug ประจำเดือนนะจ๊ะนายจ๋า! (เซฟเงินรูปีไว้ซื้อทองใส่จ้ะ)"
         flex_payload = create_promotions_carousel(promos)
 
-    elif intent == IntentType.ITEM_DETAIL.value and nlp_res.get("matched_item"):
-        item = format_item_images([nlp_res["matched_item"]], base_url=base_url)[0]
-        reply_text = f"✨ ส่องเมนู {item['name_th']} ({item['name_en']}) จาก Starbug ซูมดูความอร่อยแบบชัดๆ เลยนะจ๊ะนายจ๋า:"
-        flex_payload = create_product_detail_flex(item)
-        items_shown = [item]
-
-    elif intent == IntentType.ORDER.value:
+    elif intent == IntentType.ORDER.value or intent == IntentType.ITEM_DETAIL.value:
         item = nlp_res.get("matched_item")
         if item:
             item = format_item_images([item], base_url=base_url)[0]
             item_name = item.get("name_th", "เมนู Starbug")
             item_en = item.get("name_en", "")
 
-            # Dynamic size & price calculation based on user entity
             selected_size = entities.get("selected_size")
             prices_dict = item.get("prices", {})
+            has_multiple_sizes = len(prices_dict) > 1
+
+            # Case 1: Specific size is selected/confirmed by the user
             if selected_size and selected_size in prices_dict:
                 size_label = selected_size
                 price = prices_dict[selected_size]
-            elif "Tall" in prices_dict:
-                size_label = "Tall"
-                price = prices_dict["Tall"]
-            elif prices_dict:
-                size_label = list(prices_dict.keys())[0]
-                price = prices_dict[size_label]
+
+                action_desc = "อบและจัดเตรียมเมนู 🥐" if item.get("is_food") else "สะบัดกาน้ำชงเมนู ☕"
+
+                reply_text = (
+                    f"✅ รับออเดอร์ Starbug แล้วจ้านายจ๋า!\n"
+                    f"👨‍🍳 บาริสต้าดอลลี่กำลัง{action_desc}: {item_name} ({item_en})\n"
+                    f"📏 ขนาด: {size_label}\n"
+                    f"💰 ค่าเสียหาย: ฿{price}\n"
+                    f"⏱️ เวลารอประมาณ 10-15 นาที (หรือจนกว่าโรตีจะสุก 🤣)\n\n"
+                    f"🌐 กดปุ่มด้านล่างเพื่อเปิดหน้าเว็บ Starbug ไปชำระเงินต่อได้ทันทีเลยนะจ๊ะนายจ๋า!"
+                )
+                flex_payload = create_order_confirmation_flex(order_item=dict(item, price=price, selected_size=size_label))
+                items_shown = [dict(item, price=price, selected_size=size_label)]
+
+            # Case 2: Mentioned specific item but hasn't selected size yet -> Show Detail & Size Selection Card
             else:
-                size_label = "Standard"
-                price = item.get("price", 150)
-
-            order_item = dict(item)
-            order_item["price"] = price
-            order_item["selected_size"] = size_label
-
-            action_desc = "อบและจัดเตรียมเมนู 🥐" if item.get("is_food") else "สะบัดกาน้ำชงเมนู ☕"
-
-            reply_text = (
-                f"✅ รับออเดอร์ Starbug แล้วจ้านายจ๋า!\n"
-                f"👨‍🍳 บาริสต้าดอลลี่กำลัง{action_desc}: {item_name} ({item_en})\n"
-                f"📏 ขนาด: {size_label}\n"
-                f"💰 ค่าเสียหาย: ฿{price}\n"
-                f"⏱️ เวลารอประมาณ 10-15 นาที (หรือจนกว่าโรตีจะสุก 🤣)\n\n"
-                f"🌐 กดปุ่มด้านล่างเพื่อเปิดหน้าเว็บ Starbug ไปชำระเงินต่อได้ทันทีเลยนะจ๊ะนายจ๋า!"
-            )
-            flex_payload = create_order_confirmation_flex(order_item)
-            items_shown = [order_item]
+                reply_text = (
+                    f"✨ นายจ๋าอยากรับ {item_name} ({item_en}) ขนาดไหนดีจ๊ะ?\n\n"
+                    f"👇 กรุณากดเลือกขนาดแก้วที่ต้องการด้านล่างนี้เพื่อให้บาริสต้าดอลลี่จัดเสิร์ฟได้เลยนะจ๊ะนายจ๋า ☕🥐"
+                )
+                flex_payload = create_product_detail_flex(item)
+                items_shown = [item]
         else:
             reply_text = (
-                "✅ รับออเดอร์ Starbug เรียบร้อยแล้วจ้านายจ๋า!\n"
-                "บาริสต้ากำลังสะบัดกาน้ำชงเครื่องดื่มให้อย่างไว ☕✨\n\n"
-                "🌐 กดปุ่มด้านล่างเพื่อเปิดหน้าเว็บ Starbug และชำระเงินต่อได้ทันทีนะจ๊ะ!"
+                "☕ นายจ๋าอยากสั่งเมนูไหนเป็นพิเศษจ๊ะ? ลองพิมพ์ชื่อเมนู หรือเลือกดู 5 เมนูแนะนำด้านล่างนี้ได้เลยนะจ๊ะนายจ๋า ✨"
             )
-            flex_payload = create_order_confirmation_flex()
+            candidates = get_menu_data()
+            items_shown = format_item_images(get_top_5_recommendations(candidates, session_id=session_id), base_url=base_url)
+            flex_payload = create_product_carousel_flex(items_shown, "เมนู Starbug แนะนำสำหรับคุณ")
 
     elif intent == IntentType.BARISTA_ROAST.value:
         roast_text = get_random_barista_roast()
